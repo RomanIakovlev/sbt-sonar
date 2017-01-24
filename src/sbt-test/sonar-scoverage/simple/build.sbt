@@ -15,3 +15,16 @@ sonarProjectKey := "AcsMono"
 sonarProjectName := "Acs Mono Repository"
 sonarProjectVersion := "1.0"
 sonarRunnerOptions := List("-e", "-X")
+
+lazy val check = taskKey[Unit]("Check if SonarQube results were submitted successfully")
+lazy val cleanSonar = taskKey[Unit]("Cleans the SonarQube before running tests")
+
+(test in Test) <<= (test in Test).dependsOn(cleanSonar)
+
+cleanSonar := {
+  SonarApiTest.clean(sonarProjectKey.value)
+}
+
+check := {
+  SonarApiTest.sanityCheck(sonarProjectKey.value)
+}

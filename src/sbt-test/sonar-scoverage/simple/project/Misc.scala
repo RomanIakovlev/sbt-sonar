@@ -22,8 +22,6 @@ object Misc extends AutoPlugin {
     override def checkPermission(perm: Permission, context: scala.Any): Unit = ()
   }
 
-  println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
-
   val sm = new SonarSecurityManager
   System.setSecurityManager(sm)
 
