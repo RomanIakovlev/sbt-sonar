@@ -1,0 +1,6 @@
+# check if sonar command exists
+> clean
+> coverage
+> test
+> coverageReport
+> sonar
