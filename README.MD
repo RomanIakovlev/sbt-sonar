@@ -1,15 +1,15 @@
-#SBT + Sonar + Scoverage
+# SBT + Sonar + Scoverage
 
-##Quote
+## Quote
 > If you can't manage it, you can't improve it.
 >
 >― *attributed to different people*
 
-##Overview
+## Overview
 Enables SonarQube analysis on SBT projects. Supports aggregated SBT projects as multi-module SonarQube analysis, 
 and Scoverage statements reporting.  
 
-##Usage
+## Usage
 Add dependency to your project:
 
 In `project/plugins.sbt`:
